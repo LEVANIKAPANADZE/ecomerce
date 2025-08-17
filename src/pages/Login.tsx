@@ -39,7 +39,7 @@ export default function Login() {
 
     try {
       const response = await fetch(
-        "https://pixelize.pythonanywhere.com/users/",
+        "https://pixelize.pythonanywhere.com/login/",
         {
           method: "POST",
           headers: {

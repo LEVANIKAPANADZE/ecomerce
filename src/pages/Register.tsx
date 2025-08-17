@@ -1,4 +1,4 @@
-import Cart from "/trolley.png";
+import Cart from "/carts.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -85,11 +85,19 @@ export default function Register() {
   }
 
   return (
-    <>
-      <img src={Cart} alt="Shopping cart" className="w-8 h-8" />
+    <div className="flex flex-col justify-center items-center min-h-screen">
+      <img src={Cart} alt="Shopping cart" className="w-[50px] h-[50px]" />
 
-      <div>
-        <h1>Sign Up</h1>
+      <div
+        className="bg-amber-500 w-[327px] py-[24px] 
+      px-[32px] mt-[58px] rounded-[10px]"
+      >
+        <h1
+          className="w-[76px] font-normal text-[20px] 
+        leading-[100%] tracking-[0.5px] text-emerald-600"
+        >
+          Sign Up
+        </h1>
 
         <form onSubmit={handleSubmission}>
           <div>
@@ -116,6 +124,6 @@ export default function Register() {
           Already have an account? <Link to={"/"}>Login</Link>
         </p>
       </div>
-    </>
+    </div>
   );
 }
