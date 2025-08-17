@@ -69,8 +69,16 @@ export default function Login() {
     <div className="flex flex-col justify-center items-center min-h-screen">
       <img src={Cart} alt="Shopping cart" className="w-[32px] h-[32px]" />
 
-      <div className="bg-[#bfbfbf] w-[327px] py-[24px] px-[32px]">
-        <h1>Login</h1>
+      <div
+        className="bg-amber-500 w-[327px] py-[24px] 
+      px-[32px] mt-[58px] rounded-[10px]"
+      >
+        <h1
+          className="w-[76px] font-normal text-[32px] 
+        leading-[100%] tracking-[0.5px] "
+        >
+          Login
+        </h1>
 
         <form onSubmit={handleLogin}>
           <div>
