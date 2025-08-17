@@ -67,7 +67,7 @@ export default function Login() {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen">
-      <img src={Cart} alt="Shopping cart" className="w-[32px] h-[32px]" />
+      <img src={Cart} alt="Shopping cart" className="w-[50px] h-[50px]" />
 
       <div
         className="bg-amber-500 w-[327px] py-[24px] 
@@ -81,24 +81,36 @@ export default function Login() {
         </h1>
 
         <form onSubmit={handleLogin}>
-          <div>
-            <input
-              type="text"
-              value={user.email}
-              placeholder="Email address"
-              onChange={(e) => setUser({ ...user, email: e.target.value })}
-            />
-            {errors.emailER && <span>Incorrect Email</span>}
-          </div>
-
-          <div>
-            <input
-              type="text"
-              value={user.password}
-              placeholder="Password"
-              onChange={(e) => setUser({ ...user, password: e.target.value })}
-            />
-            {errors.passwordER && <span>Password required</span>}
+          <div className="my-[40px]">
+            {" "}
+            <div className="w-[270px] mb-[24px]">
+              <input
+                className="w-full
+                border-b border-black
+                opacity-100
+                placeholder-opacity-50
+                focus:outline-none"
+                type="text"
+                value={user.email}
+                placeholder="Email address"
+                onChange={(e) => setUser({ ...user, email: e.target.value })}
+              />
+              {errors.emailER && <span>Incorrect Email</span>}
+            </div>
+            <div className="w-[270px]">
+              <input
+                className="    w-full
+              border-b border-black
+              opacity-100
+              placeholder-opacity-50
+              focus:outline-none"
+                type="text"
+                value={user.password}
+                placeholder="Password"
+                onChange={(e) => setUser({ ...user, password: e.target.value })}
+              />
+              {errors.passwordER && <span>Password required</span>}
+            </div>
           </div>
 
           <button type="submit">Login to your account</button>
