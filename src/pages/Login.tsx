@@ -1,4 +1,4 @@
-import Cart from "/trolley.png";
+import Cart from "/carts.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -83,7 +83,7 @@ export default function Login() {
         <form onSubmit={handleLogin}>
           <div className="my-[40px]">
             {" "}
-            <div className="w-[270px] mb-[24px]">
+            <div className=" mb-[24px] w-[full]">
               <input
                 className="w-full
                 border-b border-black
@@ -97,9 +97,9 @@ export default function Login() {
               />
               {errors.emailER && <span>Incorrect Email</span>}
             </div>
-            <div className="w-[270px]">
+            <div className="w-full">
               <input
-                className="    w-full
+                className="w-full
               border-b border-black
               opacity-100
               placeholder-opacity-50
@@ -113,12 +113,21 @@ export default function Login() {
             </div>
           </div>
 
-          <button type="submit">Login to your account</button>
+          <button
+            type="submit"
+            className="
+            bg-emerald-500 w-full py-[14px] text-white rounded-[10px]"
+          >
+            Login to your account
+          </button>
         </form>
 
-        <p>
+        <div
+          className="w-[216px] font-normal text-[13px] leading-[100%]
+          tracking-[1px] mt-[24px] text-center mx-auto "
+        >
           Don't have an account? <Link to="/register">Sign Up</Link>
-        </p>
+        </div>
       </div>
     </div>
   );
