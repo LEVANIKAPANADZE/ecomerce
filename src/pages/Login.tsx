@@ -75,7 +75,7 @@ export default function Login() {
       >
         <h1
           className="w-[76px] font-normal text-[32px] 
-        leading-[100%] tracking-[0.5px] "
+        leading-[100%] tracking-[0.5px] text-emerald-600"
         >
           Login
         </h1>
@@ -95,7 +95,9 @@ export default function Login() {
                 placeholder="Email address"
                 onChange={(e) => setUser({ ...user, email: e.target.value })}
               />
-              {errors.emailER && <span>Incorrect Email</span>}
+              {errors.emailER && (
+                <span className="text-red-700">Incorrect Email</span>
+              )}
             </div>
             <div className="w-full">
               <input
@@ -109,14 +111,17 @@ export default function Login() {
                 placeholder="Password"
                 onChange={(e) => setUser({ ...user, password: e.target.value })}
               />
-              {errors.passwordER && <span>Password required</span>}
+              {errors.passwordER && (
+                <span className="text-red-700">Password required</span>
+              )}
             </div>
           </div>
 
           <button
             type="submit"
             className="
-            bg-emerald-500 w-full py-[14px] text-white rounded-[10px]"
+            bg-emerald-500 w-full py-[14px] text-white rounded-[10px] 
+             hover:bg-white hover:text-black cursor-pointer"
           >
             Login to your account
           </button>
@@ -124,9 +129,12 @@ export default function Login() {
 
         <div
           className="w-[216px] font-normal text-[13px] leading-[100%]
-          tracking-[1px] mt-[24px] text-center mx-auto "
+          tracking-[1px] mt-[24px] text-center mx-auto"
         >
-          Don't have an account? <Link to="/register">Sign Up</Link>
+          Don't have an account?{" "}
+          <Link to="/register" className="text-emerald-700 hover:underline">
+            Sign Up
+          </Link>
         </div>
       </div>
     </div>
