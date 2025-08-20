@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function Register() {
+  type Field = "Username" | "Email" | "Password";
+
   const [values, setValues] = useState({
     Username: "",
     Email: "",
@@ -17,7 +19,7 @@ export default function Register() {
     Password: false,
   });
 
-  const arr = [
+  const arr: { placeholder: string; inputName: Field; message: string }[] = [
     {
       placeholder: "Username",
       inputName: "Username",
@@ -75,7 +77,11 @@ export default function Register() {
         const data = await response.json();
         console.log(data);
       } catch (error) {
-        alert(error.message);
+        if (error instanceof Error) {
+          alert(error.message);
+        } else {
+          alert("An unexpected error occured");
+        }
       }
     }
   }
