@@ -67,11 +67,16 @@ export default function Login() {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen">
-      <img src={Cart} alt="Shopping cart" className="w-[50px] h-[50px]" />
+      <img
+        src={Cart}
+        alt="Shopping cart"
+        className="w-[50px] h-[50px] md:w-[70px] md:h-[70px]"
+      />
 
       <div
         className="bg-amber-500 w-[327px] py-[24px] 
-      px-[32px] mt-[58px] rounded-[10px]"
+      px-[32px] mt-[58px] rounded-[10px] md:w-[400px] md:py-[32px] md:rounded-[20px]
+       md:mt-[72px]"
       >
         <h1
           className="w-[76px] font-normal text-[32px] 
@@ -120,7 +125,7 @@ export default function Login() {
           <button
             type="submit"
             className="
-            bg-emerald-500 w-full py-[14px] text-white rounded-[10px] 
+            bg-emerald-500 w-full py-[14px] text-white rounded-[15px] 
              hover:bg-white hover:text-black cursor-pointer"
           >
             Login to your account
@@ -128,8 +133,8 @@ export default function Login() {
         </form>
 
         <div
-          className="w-[216px] font-normal text-[13px] leading-[100%]
-          tracking-[1px] mt-[24px] text-center mx-auto"
+          className="w-auto font-normal text-[13px] leading-[100%]
+          tracking-[1px] mt-[24px] text-center mx-auto whitespace-nowrap md:text-[15px]"
         >
           Don't have an account?{" "}
           <Link to="/register" className="text-emerald-700 hover:underline">
