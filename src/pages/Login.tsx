@@ -83,7 +83,7 @@ export default function Login() {
         <form onSubmit={handleLogin}>
           <div className="my-[40px]">
             {" "}
-            <div className=" mb-[24px] w-[full]">
+            <div className="mb-[24px] w-[full]">
               <input
                 className="w-full
                 border-b border-black

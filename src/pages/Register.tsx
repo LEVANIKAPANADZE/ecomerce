@@ -93,17 +93,22 @@ export default function Register() {
       px-[32px] mt-[58px] rounded-[10px]"
       >
         <h1
-          className="w-[76px] font-normal text-[20px] 
-        leading-[100%] tracking-[0.5px] text-emerald-600"
+          className="w-[76px] font-normal text-[32px] 
+        leading-[100%] tracking-[0.5px] text-emerald-600 text-center whitespace-nowrap"
         >
           Sign Up
         </h1>
 
         <form onSubmit={handleSubmission}>
-          <div>
+          <div className="my-[40px]">
             {arr.map((item) => (
-              <div key={item.inputName}>
+              <div key={item.inputName} className="mb-[24px] w-[full]">
                 <input
+                  className="w-full
+                border-b border-black
+                opacity-100
+                placeholder-opacity-50
+                focus:outline-none"
                   type="text"
                   name={item.inputName}
                   placeholder={item.placeholder}
@@ -111,18 +116,31 @@ export default function Register() {
                   onChange={handleChange}
                 />
                 {errors[item.inputName] && (
-                  <p className="error">{item.message}</p>
+                  <p className="error text-red-700">{item.message}</p>
                 )}
               </div>
             ))}
           </div>
 
-          <button type="submit">Create your account</button>
+          <button
+            className="
+            bg-emerald-500 w-full py-[14px] text-white rounded-[10px] 
+             hover:bg-white hover:text-black cursor-pointer"
+            type="submit"
+          >
+            Create your account
+          </button>
         </form>
 
-        <p>
-          Already have an account? <Link to={"/"}>Login</Link>
-        </p>
+        <div
+          className="w-[216px] font-normal text-[13px] leading-[100%]
+          tracking-[1px] mt-[24px] text-center mx-auto"
+        >
+          Alread have an account?{" "}
+          <Link to="/" className="text-emerald-700 hover:underline">
+            Login
+          </Link>
+        </div>
       </div>
     </div>
   );
