@@ -8,22 +8,25 @@ export default function Header() {
   return (
     <div>
       {" "}
-      <header>
+      <header
+        className="bg-black text-white flex justify-between 
+        items-center px-[24px] py-[32px]"
+      >
         <div>
           <img
-            src="/menu-bar.png"
+            src="/menu.png"
             alt="Burger Menu"
-            className="h-[27px] w-[27px]"
+            className="h-[27px] w-[27px] cursor-pointer"
             onClick={() => setBurger(!burger)}
           />
         </div>
 
-        <h1>audiophile</h1>
+        <h1 className="font-black text-[20px]">audiophile</h1>
 
         <img
           src={shoppingCart}
           alt="Shopping Cart"
-          className="h-[27px] w-[27px]"
+          className="h-[23px] w-[23px] cursor-pointer"
         />
       </header>
       <hr />
