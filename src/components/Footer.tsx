@@ -2,6 +2,8 @@ import img from "/assets/shared/desktop/image-best-gear.jpg";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const arr = ["HOME", "HEADPHONES", "SPEAKERS", "EARPHONES"];
+
   return (
     <div>
       <img src={img} alt="Music gear image with guy" />
@@ -22,10 +24,11 @@ export default function Footer() {
         <h1>udiophile</h1>
 
         <div>
-          <Link to="/home">HOME</Link>
-          <Link to="/headphones">HEADPHONES</Link>
-          <Link to="/speakers">SPEAKERS</Link>
-          <Link to="/earphones">EARPHONES</Link>
+          {arr.map((item, index) => (
+            <Link to={`/${item.toLowerCase()}`} key={index}>
+              {item}
+            </Link>
+          ))}
         </div>
 
         <p>
