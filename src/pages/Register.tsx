@@ -95,23 +95,24 @@ export default function Register() {
       <img
         src={Cart}
         alt="Shopping cart"
-        className="w-[50px] h-[50px] md:w-[70px] md:h-[70px]"
+        className="w-[50px] h-[50px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px]"
       />
 
       <div
         className="bg-amber-500 w-[327px] py-[24px] 
        px-[32px] mt-[58px] rounded-[10px] md:w-[400px] md:py-[32px] md:rounded-[20px]
-       md:mt-[72px]"
+       md:mt-[72px] lg:mt-[83px]"
       >
         <h1
           className="w-[76px] font-normal text-[32px] 
-        leading-[100%] tracking-[0.5px] text-emerald-600 text-center whitespace-nowrap"
+        leading-[100%] tracking-[0.5px] text-emerald-600 
+        text-center whitespace-nowrap lg:w-[105px]"
         >
           Sign Up
         </h1>
 
         <form onSubmit={handleSubmission}>
-          <div className="my-[40px]">
+          <div className="my-[40px] lg:mb-[32px] lg:mt-[40px]">
             {arr.map((item) => (
               <div key={item.inputName} className="mb-[24px] w-[full]">
                 <input
