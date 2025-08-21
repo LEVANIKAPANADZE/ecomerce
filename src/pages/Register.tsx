@@ -1,9 +1,11 @@
 import Cart from "/carts.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
   type Field = "Username" | "Email" | "Password";
+  const navigate = useNavigate();
 
   const [values, setValues] = useState({
     Username: "",
@@ -76,6 +78,7 @@ export default function Register() {
         );
         const data = await response.json();
         console.log(data);
+        navigate("/Home", { state: { id: data.id } });
       } catch (error) {
         if (error instanceof Error) {
           alert(error.message);

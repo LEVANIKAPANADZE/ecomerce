@@ -1,4 +1,4 @@
-import shoppingCart from "../../public/Shopping-cart .png";
+import shoppingCart from "/carts.png";
 import { useState } from "react";
 import Selection from "../components/AudioTechSel";
 
@@ -11,7 +11,7 @@ export default function Header() {
       <header>
         <div>
           <img
-            src="hamburger.png"
+            src="/menu-bar.png"
             alt="Burger Menu"
             className="h-[27px] w-[27px]"
             onClick={() => setBurger(!burger)}
