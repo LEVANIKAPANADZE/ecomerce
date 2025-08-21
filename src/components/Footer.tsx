@@ -5,23 +5,29 @@ export default function Footer() {
   const arr = ["HOME", "HEADPHONES", "SPEAKERS", "EARPHONES"];
 
   return (
-    <div>
-      <img src={img} alt="Music gear image with guy" />
+    <footer>
+      <div className="mx-[24px] flex flex-col items-center justify-center text-center">
+        <img
+          src={img}
+          alt="Music gear image with guy"
+          className="rounded-[5px] mb-[40px]"
+        />
+        <h1 className="text-[28px] font-bold leading-[100%] tracking-[1px]">
+          BRINGING YOU THE <br />
+          <span className="text-orange-500">BEST</span> AUDIO GEAR
+        </h1>
+        <p>
+          Located at the heart of New York City, Audiophile is the premier store
+          for high end headphones, earphones, speakers, and audio accessories.
+          We have a large showroom and luxury demonstration rooms available for
+          you to browse and experience a wide range of our products. Stop by our
+          store to meet some of the fantastic people who make Audiophile the
+          best place to buy your portable audio equipment.
+        </p>
+      </div>
 
-      <h1>
-        BRINGING YOU THE <span>BEST</span> AUDIO GEAR
-      </h1>
-      <p>
-        Located at the heart of New York City, Audiophile is the premier store
-        for high end headphones, earphones, speakers, and audio accessories. We
-        have a large showroom and luxury demonstration rooms available for you
-        to browse and experience a wide range of our products. Stop by our store
-        to meet some of the fantastic people who make Audiophile the best place
-        to buy your portable audio equipment.
-      </p>
-
-      <div>
-        <h1>udiophile</h1>
+      <div className="mx-[24px] text-center">
+        <h1>adiophile</h1>
 
         <div>
           {arr.map((item, index) => (
@@ -40,6 +46,6 @@ export default function Footer() {
 
         <h4>Copyright 2021. All Rights Reserved</h4>
       </div>
-    </div>
+    </footer>
   );
 }

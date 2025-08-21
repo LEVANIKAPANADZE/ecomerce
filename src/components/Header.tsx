@@ -9,7 +9,7 @@ export default function Header() {
     <div>
       {" "}
       <header
-        className="bg-black text-white flex justify-between 
+        className="bg-black text-white flex justify-between
         items-center px-[24px] py-[32px]"
       >
         <div>
