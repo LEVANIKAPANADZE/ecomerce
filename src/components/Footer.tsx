@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer>
-      <div className="mx-[24px] flex flex-col items-center justify-center text-center">
+      <div className="mx-auto px-[24px] flex flex-col items-center text-center">
         <img
           src={img}
           alt="Music gear image with guy"
@@ -16,7 +16,7 @@ export default function Footer() {
           BRINGING YOU THE <br />
           <span className="text-orange-500">BEST</span> AUDIO GEAR
         </h1>
-        <p>
+        <p className="text-[15px] leading-[25px] mb-[120px] opacity-70 mt-[32px]">
           Located at the heart of New York City, Audiophile is the premier store
           for high end headphones, earphones, speakers, and audio accessories.
           We have a large showroom and luxury demonstration rooms available for
@@ -26,25 +26,35 @@ export default function Footer() {
         </p>
       </div>
 
-      <div className="mx-[24px] text-center">
-        <h1>adiophile</h1>
+      <div className="w-full bg-black text-white">
+        <hr className="w-[101px] h-[4px] bg-[#D87D4A] border-0 mx-auto mb-8" />
+        <div className="max-w-[1100px] mx-auto px-[24px] text-center py-10">
+          <h1 className="font-black text-[25px]">audiophile</h1>
 
-        <div>
-          {arr.map((item, index) => (
-            <Link to={`/${item.toLowerCase()}`} key={index}>
-              {item}
-            </Link>
-          ))}
+          <div className="flex flex-col gap-4 mt-4">
+            {arr.map((item, index) => (
+              <Link
+                to={`/${item.toLowerCase()}`}
+                key={index}
+                className="font-bold text-[13px]
+              leading-[25px] tracking-[2px] uppercase cursor-pointer hover:text-orange-500"
+              >
+                {item}
+              </Link>
+            ))}
+          </div>
+
+          <p className="mt-12 opacity-50 font-normal text-[15px] leading-[25px]">
+            Audiophile is an all in one stop to fulfill your audio needs. We're
+            a small team of music lovers and sound specialists who are devoted
+            to helping you get the most out of personal audio. Come and visit
+            our demo facility - we’re open 7 days a week.
+          </p>
+
+          <h4 className="mt-12 opacity-50 mb-[110px] text-[15px] leading-[25px] font-bold">
+            Copyright 2021. All Rights Reserved
+          </h4>
         </div>
-
-        <p>
-          Audiophile is an all in one stop to fulfill your audio needs. We're a
-          small team of music lovers and sound specialists who are devoted to
-          helping you get the most out of personal audio. Come and visit our
-          demo facility - we’re open 7 days a week.
-        </p>
-
-        <h4>Copyright 2021. All Rights Reserved</h4>
       </div>
     </footer>
   );
