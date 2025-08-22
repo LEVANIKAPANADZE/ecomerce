@@ -29,7 +29,7 @@ export default function Header() {
           className="h-[23px] w-[23px] cursor-pointer"
         />
       </header>
-      <hr />
+      <hr className="border-t-2 border-white w-full opacity-10" />
       {burger ? <Selection /> : null}
     </div>
   );
