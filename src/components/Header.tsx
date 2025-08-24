@@ -7,11 +7,7 @@ export default function Header() {
 
   return (
     <div>
-      {" "}
-      <header
-        className="bg-black text-white flex justify-between
-        items-center px-[24px] py-[32px]"
-      >
+      <header className="bg-black text-white flex justify-between items-center px-[24px] py-[32px] border-b-2 border-white/10">
         <div>
           <img
             src="/menu.png"
@@ -29,8 +25,10 @@ export default function Header() {
           className="h-[23px] w-[23px] cursor-pointer"
         />
       </header>
-      <hr className="border-t-2 border-white w-full opacity-10" />
-      {burger ? <Selection /> : null}
+
+      <div className="border-b-2 border-white">
+        {burger ? <Selection /> : null}
+      </div>
     </div>
   );
 }

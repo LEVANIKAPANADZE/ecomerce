@@ -10,7 +10,7 @@ export default function Footer() {
         <img
           src={img}
           alt="Music gear image with guy"
-          className="rounded-[5px] mb-[40px] w-[290px]"
+          className="rounded-[5px] mb-[40px] w-[290px] md:w-[689px]"
         />
         <h1 className="text-[28px] font-bold leading-[100%] tracking-[1px]">
           BRINGING YOU THE <br />
