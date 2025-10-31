@@ -8,7 +8,8 @@ export default function Header() {
   return (
     <div>
       <header
-        className="bg-black text-white flex justify-between items-center px-[24px] 
+        className="bg-black text-white flex justify-between 
+      items-center px-[24px] 
       py-[32px] border-b-2 border-white/12"
       >
         <div>
