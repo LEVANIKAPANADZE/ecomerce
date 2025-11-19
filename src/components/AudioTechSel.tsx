@@ -62,7 +62,7 @@ export default function AudioTechSel() {
           </picture>
           <span>{item.name}</span>
           <div>
-            SHOP <img src={rightArrow} alt="Arrow to right" />
+            SHOP <img src={rightArrow} alt="Right arrow" />
           </div>
         </Link>
       ))}
