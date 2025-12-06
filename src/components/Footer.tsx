@@ -56,9 +56,13 @@ export default function Footer() {
           </h4>
         </div>
 
-        <div>
-          <span>https://my-contacts-hazel.vercel.app</span>
-          <span>https://guns.lol/dativardzma</span>
+        <div className="flex flex-col">
+          <a target="_blank" href="https://my-contacts-hazel.vercel.app">
+            DEV: Levani Kapanadze
+          </a>
+          <a target="_blank" href="https://guns.lol/dativardzma">
+            DEV: Davit Svanidze
+          </a>
         </div>
       </div>
     </footer>
