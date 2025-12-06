@@ -55,6 +55,11 @@ export default function Footer() {
             Copyright 2021. All Rights Reserved
           </h4>
         </div>
+
+        <div>
+          <span>https://my-contacts-hazel.vercel.app</span>
+          <span>https://guns.lol/dativardzma</span>
+        </div>
       </div>
     </footer>
   );

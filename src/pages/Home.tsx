@@ -1,24 +1,8 @@
 import { useState, useEffect } from "react";
+import data from "../../data.json";
 
 export default function Home({ id }: { id: string }) {
-  const [data, setData] = useState<any[]>([]);
   const [requestedTech, setRequestedTech] = useState<any | null>(null);
-
-  async function fetchData() {
-    const response = await fetch(
-      "https://pixelize.pythonanywhere.com/Products"
-    );
-    const result = await response.json();
-    setData(result);
-
-    if (result.length > 0) {
-      setRequestedTech(result[0]);
-    }
-  }
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   useEffect(() => {
     if (data.length === 0) return;
