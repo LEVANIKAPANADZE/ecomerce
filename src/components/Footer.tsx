@@ -60,7 +60,7 @@ export default function Footer() {
           <a
             target="_blank"
             href="https://my-contacts-hazel.vercel.app"
-            className="mb-[16px]"
+            className="mb-[16px] hover:text-orange-500"
           >
             DEV: Levani Kapanadze
           </a>
