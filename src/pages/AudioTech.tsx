@@ -30,11 +30,13 @@ export default function AudioTech() {
 
   return (
     <div className="flex flex-col items-center">
-      <div>
-        <h1>{AudioTech?.toUpperCase()}</h1>
+      <div className="bg-black text-white w-[100%] flex items-center justify-center px-[84px] py-[32px]">
+        <h1 className="font-bold text-[28px] leading-[100%] tracking-[2px]">
+          {AudioTech?.toUpperCase()}
+        </h1>
       </div>
 
-      <section>
+      <section className="mt-[64px]">
         {dataC.map((e) => {
           return (
             <div key={e.name} className="w-[327px]">
