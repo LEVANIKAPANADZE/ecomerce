@@ -29,7 +29,7 @@ export default function AudioTech() {
   }, [AudioTech, navigate]);
 
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <div>
         <h1>{AudioTech?.toUpperCase()}</h1>
       </div>
@@ -37,7 +37,7 @@ export default function AudioTech() {
       <section>
         {dataC.map((e) => {
           return (
-            <div key={e.name}>
+            <div key={e.name} className="w-[327px]">
               <img src={e.categoryImage.tablet} alt="Headphone image" />
               {e.new && <span>NEW PRODUCT</span>}
               <h1>{e.name}</h1>
