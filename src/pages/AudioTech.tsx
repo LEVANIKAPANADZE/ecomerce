@@ -40,7 +40,24 @@ export default function AudioTech() {
         {dataC.map((e) => {
           return (
             <div key={e.name} className="w-[327px]">
-              <img src={e.categoryImage.tablet} alt="Headphone image" />
+              <img
+                src={e.categoryImage.mobile}
+                alt={e.name}
+                className="block md:hidden w-full"
+              />
+
+              <img
+                src={e.categoryImage.tablet}
+                alt={e.name}
+                className="hidden md:block desktop:hidden w-full"
+              />
+
+              <img
+                src={e.categoryImage.desktop}
+                alt={e.name}
+                className="hidden desktop:block w-full"
+              />
+
               {e.new && <span>NEW PRODUCT</span>}
               <h1>{e.name}</h1>
               <p>{e.description}</p>
