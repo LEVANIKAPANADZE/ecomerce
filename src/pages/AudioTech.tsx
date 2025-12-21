@@ -36,10 +36,10 @@ export default function AudioTech() {
         </h1>
       </div>
 
-      <section className="mt-[64px]">
+      <section className="mt-[64px] flex flex-col gap-[120px]">
         {dataC.map((e) => {
           return (
-            <div key={e.name} className="w-[327px]">
+            <div key={e.name} className="w-[327px] flex flex-col items-center">
               <img
                 src={e.categoryImage.mobile}
                 alt={e.name}
@@ -58,7 +58,14 @@ export default function AudioTech() {
                 className="hidden desktop:block w-full"
               />
 
-              {e.new && <span>NEW PRODUCT</span>}
+              {e.new && (
+                <span
+                  className="mt-[32px] text-[#D87D4A] 
+                  font-normal text-[14px] leading-[100%] tracking-[10px]"
+                >
+                  NEW PRODUCT
+                </span>
+              )}
               <h1>{e.name}</h1>
               <p>{e.description}</p>
               <Link to={`/product?slug=${encodeURIComponent(e.slug)}`}>
