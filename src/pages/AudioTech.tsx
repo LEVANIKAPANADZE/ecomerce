@@ -66,9 +66,17 @@ export default function AudioTech() {
                   NEW PRODUCT
                 </span>
               )}
-              <h1>{e.name}</h1>
-              <p>{e.description}</p>
-              <Link to={`/product?slug=${encodeURIComponent(e.slug)}`}>
+              <h1 className="my-[24px] text-center font-bold text-[28px] leading-[100%] tracking-[1px]">
+                {e.name}
+              </h1>
+              <p className="font-normal text-center opacity-[50%] text-[15px] leading-[25px] tracking-[0px]">
+                {e.description}
+              </p>
+              <Link
+                to={`/product?slug=${encodeURIComponent(e.slug)}`}
+                className="px-[30px] mt-[24px] py-[15px] bg-[#D87D4A] text-white 
+                inline-block font-bold text-[13px] leading-[100%] tracking-[1px] cursor-pointer"
+              >
                 SEE PRODUCT
               </Link>
             </div>
