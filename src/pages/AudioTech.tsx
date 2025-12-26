@@ -49,13 +49,13 @@ export default function AudioTech() {
               <img
                 src={e.categoryImage.tablet}
                 alt={e.name}
-                className="hidden md:block desktop:hidden w-full"
+                className="hidden md:block xl:hidden w-full"
               />
 
               <img
                 src={e.categoryImage.desktop}
                 alt={e.name}
-                className="hidden desktop:block w-full"
+                className="hidden xl:block w-full"
               />
 
               {e.new && (

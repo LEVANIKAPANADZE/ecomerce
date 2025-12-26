@@ -34,77 +34,103 @@ export default function Product() {
   }
 
   return (
-    <div className="">
+    <div className="flex flex-col items-center">
       <span
         onClick={() => navigate(-1)}
         className="block mt-[16px] ml-[24px] text-[#000000] opacity-[50%] 
-        font-normal text-[15px] leading-[25px]"
+        text-[15px] leading-[25px] self-start"
       >
         Go Back
       </span>
 
-      <main>
-        <div>
-          <img src={product.categoryImage.mobile} alt={product.name} />
-          {product.new && <p>NEW PRODUCT</p>}
-          <h1>{product.name}</h1>
-          <p>{product.description}</p>
-          <span>${product.price}</span>
-        </div>
-
-        <div>
+      <div className="w-[327px] mt-[24px]">
+        <main>
           <div>
-            <button onClick={() => setQuantity((q) => Math.max(1, q - 1))}>
-              -
-            </button>
-            <span>{quantity}</span>
-            <button onClick={() => setQuantity((q) => q + 1)}>+</button>
-          </div>
-          <button>ADD TO CART</button>
-        </div>
-      </main>
-
-      <section>
-        <h1>FEATURES</h1>
-        <p>{product.features}</p>
-
-        <div>
-          <h1>IN THE BOX</h1>
-          <div>
-            {product.includes.map((item, index) => (
-              <div key={index}>
-                <span>{item.quantity}x</span>
-                <span>{item.item}</span>
-              </div>
-            ))}
+            <img
+              src={product.categoryImage.mobile}
+              alt={product.name}
+              className="block md:hidden w-full rounded-[10px]"
+            />
+            <img
+              src={product.categoryImage.tablet}
+              alt={product.name}
+              className="hidden md:block xl:hidden w-full"
+            />
+            <img
+              src={product.categoryImage.desktop}
+              alt={product.name}
+              className="hidden xl:block w-full"
+            />
+            {product.new && (
+              <p className="mt-[32px] text-[#D87D4A] text-[14px] leading-[100%] tracking-[10px]">
+                NEW PRODUCT
+              </p>
+            )}
+            <h1 className="my-[24px] font-bold text-[28px] leading-[100%] tracking-[1px]">
+              {product.name}
+            </h1>
+            <p className="text-[15px] leading-[25px] opacity-[50%] mb-[24px]">
+              {product.description}
+            </p>
+            <span className="font-bold text-[18px] leading-[100%] tracking-[1.29px]">
+              ${product.price}
+            </span>
           </div>
 
-          <div>
-            {Object.values(product.gallery).map((image, index) => (
-              <img
-                key={index}
-                src={image.mobile}
-                alt={`Product image ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h1>YOU MAY ALSO LIKE</h1>
-        {product.others.map((element, index) => (
-          <div key={index}>
-            <div>
-              <img src={element.image.mobile} alt={element.name} />
+          <div className="flex mt-[31px]">
+            <div className="">
+              <button onClick={() => setQuantity((q) => Math.max(1, q - 1))}>
+                -
+              </button>
+              <span>{quantity}</span>
+              <button onClick={() => setQuantity((q) => q + 1)}>+</button>
             </div>
-            <h1>{element.name}</h1>
-            <Link to={`/product?slug=${encodeURIComponent(element.slug)}`}>
-              SEE PRODUCT
-            </Link>
+            <button>ADD TO CART</button>
           </div>
-        ))}
-      </section>
+        </main>
+
+        <section>
+          <h1>FEATURES</h1>
+          <p>{product.features}</p>
+
+          <div>
+            <h1>IN THE BOX</h1>
+            <div>
+              {product.includes.map((item, index) => (
+                <div key={index}>
+                  <span>{item.quantity}x</span>
+                  <span>{item.item}</span>
+                </div>
+              ))}
+            </div>
+
+            <div>
+              {Object.values(product.gallery).map((image, index) => (
+                <img
+                  key={index}
+                  src={image.mobile}
+                  alt={`Product image ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h1>YOU MAY ALSO LIKE</h1>
+          {product.others.map((element, index) => (
+            <div key={index}>
+              <div>
+                <img src={element.image.mobile} alt={element.name} />
+              </div>
+              <h1>{element.name}</h1>
+              <Link to={`/product?slug=${encodeURIComponent(element.slug)}`}>
+                SEE PRODUCT
+              </Link>
+            </div>
+          ))}
+        </section>
+      </div>
 
       <Selection />
     </div>
