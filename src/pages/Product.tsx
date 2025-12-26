@@ -34,8 +34,14 @@ export default function Product() {
   }
 
   return (
-    <div>
-      <span onClick={() => navigate(-1)}>Go Back</span>
+    <div className="">
+      <span
+        onClick={() => navigate(-1)}
+        className="block mt-[16px] ml-[24px] text-[#000000] opacity-[50%] 
+        font-normal text-[15px] leading-[25px]"
+      >
+        Go Back
+      </span>
 
       <main>
         <div>
