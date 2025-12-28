@@ -76,18 +76,29 @@ export default function Product() {
               ${product.price}
             </span>
           </div>
-
-          <div className="flex mt-[31px]">
-            <div className="">
-              <button onClick={() => setQuantity((q) => Math.max(1, q - 1))}>
-                -
-              </button>
-              <span>{quantity}</span>
-              <button onClick={() => setQuantity((q) => q + 1)}>+</button>
-            </div>
-            <button>ADD TO CART</button>
-          </div>
         </main>
+
+        <div className="flex mt-[31px] gap-[16px] w-[296px]">
+          <div
+            className="bg-[#F1F1F1] w-[120px] p-[15px] 
+          flex items-center justify-between"
+          >
+            <button
+              onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+              className="font-bold ml-[15px] text-[13px] leading-[100%] tracking-[1px] opacity-[25%]"
+            >
+              -
+            </button>
+            <span className="mx-[20px]">{quantity}</span>
+            <button
+              onClick={() => setQuantity((q) => q + 1)}
+              className="font-bold text-[13px] mr-[15px] leading-[100%] tracking-[1px] opacity-[25%]"
+            >
+              +
+            </button>
+          </div>
+          <button>ADD TO CART</button>
+        </div>
 
         <section>
           <h1>FEATURES</h1>
