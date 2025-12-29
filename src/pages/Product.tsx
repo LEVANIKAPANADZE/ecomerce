@@ -80,7 +80,7 @@ export default function Product() {
 
         <div className="flex mt-[31px] gap-[16px] w-[296px]">
           <div
-            className="bg-[#F1F1F1] w-[120px] p-[15px] 
+            className="bg-[#F1F1F1] w-[120px] p-[15px]
           flex items-center justify-between"
           >
             <button
@@ -89,7 +89,9 @@ export default function Product() {
             >
               -
             </button>
-            <span className="mx-[20px]">{quantity}</span>
+            <span className="font-bold text-[13px] leading-[100%] tracking-[1px] uppercase">
+              {quantity}
+            </span>
             <button
               onClick={() => setQuantity((q) => q + 1)}
               className="font-bold text-[13px] mr-[15px] leading-[100%] tracking-[1px] opacity-[25%]"
@@ -97,7 +99,10 @@ export default function Product() {
               +
             </button>
           </div>
-          <button>ADD TO CART</button>
+
+          <button className="bg-[#D87D4A] text-white font-bold text-[13px] w-[160px]">
+            ADD TO CART
+          </button>
         </div>
 
         <section>
