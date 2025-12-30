@@ -110,13 +110,15 @@ export default function Product() {
           <h1 className="font-bold text-[24px] leading-[36px] tracking-[0.86px]">
             FEATURES
           </h1>
-          <p className="mt-[24px] mb-[88px] opacity-50 text-center">
+          <p className="mt-[24px] mb-[88px] opacity-50 font-normal text-[15px] leading-[25px]">
             {product.features}
           </p>
 
           <div>
-            <h1>IN THE BOX</h1>
-            <div>
+            <h1 className="mb-[24px] font-bold text-[24px] leading-[36px] tracking-[0.86px]">
+              IN THE BOX
+            </h1>
+            <div className="space-y-[8px]">
               {product.includes.map((item, index) => (
                 <div key={index}>
                   <span>{item.quantity}x</span>
@@ -127,11 +129,11 @@ export default function Product() {
 
             <div>
               {Object.values(product.gallery).map((image, index) => (
-                <img
-                  key={index}
-                  src={image.mobile}
-                  alt={`Product image ${index + 1}`}
-                />
+                <picture key={index}>
+                  <source media="(min-width:1440px)" srcSet={image.desktop} />
+                  <source media="(min-width:768px)" srcSet={image.tablet} />
+                  <img src={image.mobile} alt={`Product image ${index + 1}`} />
+                </picture>
               ))}
             </div>
           </div>

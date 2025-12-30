@@ -56,7 +56,7 @@ export default function AudioTechSel() {
       {navArr.map((item) => (
         <Link key={item.name} to={item.path}>
           <picture>
-            <source media="(min-width:1024px)" srcSet={item.image.desktop} />
+            <source media="(min-width:1440px)" srcSet={item.image.desktop} />
             <source media="(min-width:768px)" srcSet={item.image.tablet} />
             <img
               src={item.image.mobile}
