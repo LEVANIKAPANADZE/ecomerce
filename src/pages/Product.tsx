@@ -78,36 +78,41 @@ export default function Product() {
           </div>
         </main>
 
-        <div className="flex mt-[31px] gap-[16px] w-[296px]">
-          <div
-            className="bg-[#F1F1F1] w-[120px] p-[15px]
-          flex items-center justify-between"
-          >
-            <button
-              onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-              className="font-bold ml-[15px] text-[13px] leading-[100%] tracking-[1px] opacity-[25%]"
-            >
-              -
-            </button>
-            <span className="font-bold text-[13px] leading-[100%] tracking-[1px] uppercase">
-              {quantity}
-            </span>
-            <button
-              onClick={() => setQuantity((q) => q + 1)}
-              className="font-bold text-[13px] mr-[15px] leading-[100%] tracking-[1px] opacity-[25%]"
-            >
-              +
+        <div className="flex justify-center mt-[31px]">
+          <div className="flex gap-[16px] w-[296px]">
+            <div className="bg-[#F1F1F1] w-[120px] p-[15px] flex items-center justify-between">
+              <button
+                onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                className="font-bold text-[13px] opacity-[25%]"
+              >
+                -
+              </button>
+
+              <span className="font-bold text-[13px] uppercase">
+                {quantity}
+              </span>
+
+              <button
+                onClick={() => setQuantity((q) => q + 1)}
+                className="font-bold text-[13px] opacity-[25%]"
+              >
+                +
+              </button>
+            </div>
+
+            <button className="bg-[#D87D4A] text-white font-bold text-[13px] w-[160px] flex items-center justify-center">
+              ADD TO CART
             </button>
           </div>
-
-          <button className="bg-[#D87D4A] text-white font-bold text-[13px] w-[160px]">
-            ADD TO CART
-          </button>
         </div>
 
-        <section>
-          <h1>FEATURES</h1>
-          <p>{product.features}</p>
+        <section className="mt-[88px]">
+          <h1 className="font-bold text-[24px] leading-[36px] tracking-[0.86px]">
+            FEATURES
+          </h1>
+          <p className="mt-[24px] mb-[88px] opacity-50 text-center">
+            {product.features}
+          </p>
 
           <div>
             <h1>IN THE BOX</h1>
