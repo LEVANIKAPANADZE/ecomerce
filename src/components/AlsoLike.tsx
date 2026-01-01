@@ -7,10 +7,15 @@ type Props = {
 
 export default function AlsoLike({ product }: Props) {
   return (
-    <div>
-      <h1>YOU MAY ALSO LIKE</h1>
+    <div className="flex flex-col items-center w-[327px]">
+      <h1 className="font-bold text-[24px] leading-[36px] tracking-[0.86px] mb-[40px]">
+        YOU MAY ALSO LIKE
+      </h1>
       {product.others.map((element, index) => (
-        <div key={index}>
+        <div
+          key={index}
+          className="flex flex-col items-center gap-[32px] mb-[56px]"
+        >
           <picture key={index}>
             <source media="(min-width:1440px)" srcSet={element.image.desktop} />
             <source media="(min-width:768px)" srcSet={element.image.tablet} />
@@ -19,8 +24,14 @@ export default function AlsoLike({ product }: Props) {
               alt={`Product image ${index + 1}`}
             />
           </picture>
-          <h1>{element.name}</h1>
-          <Link to={`/product?slug=${encodeURIComponent(element.slug)}`}>
+          <h1 className="font-bold text-[24px] leading-[100%] tracking-[1.71px]">
+            {element.name}
+          </h1>
+          <Link
+            to={`/product?slug=${encodeURIComponent(element.slug)}`}
+            className="px-[30px] mt-[24px] py-[15px] bg-[#D87D4A] text-white 
+                inline-block font-bold text-[13px] leading-[100%] tracking-[1px] cursor-pointer"
+          >
             SEE PRODUCT
           </Link>
         </div>
