@@ -1,8 +1,9 @@
-import { useSearchParams, useNavigate, Link } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import data from "../../data.json";
 import { useEffect, useState } from "react";
 import Selection from "../components/AudioTechSel";
 import type { ProductType } from "../types";
+import AlsoLike from "../components/AlsoLike";
 
 export default function Product() {
   const [quantity, setQuantity] = useState(1);
@@ -131,7 +132,7 @@ export default function Product() {
               ))}
             </div>
 
-            <div className="flex flex-col gap-[20px]">
+            <div className="flex flex-col gap-[20px] mb-[120px]">
               {Object.values(product.gallery).map((image, index) => (
                 <picture key={index}>
                   <source media="(min-width:1440px)" srcSet={image.desktop} />
@@ -142,22 +143,9 @@ export default function Product() {
             </div>
           </div>
         </section>
-
-        <section>
-          <h1>YOU MAY ALSO LIKE</h1>
-          {product.others.map((element, index) => (
-            <div key={index}>
-              <div>
-                <img src={element.image.mobile} alt={element.name} />
-              </div>
-              <h1>{element.name}</h1>
-              <Link to={`/product?slug=${encodeURIComponent(element.slug)}`}>
-                SEE PRODUCT
-              </Link>
-            </div>
-          ))}
-        </section>
       </div>
+
+      <AlsoLike product={product} />
 
       <Selection />
     </div>
