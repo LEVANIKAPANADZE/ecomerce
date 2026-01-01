@@ -118,7 +118,7 @@ export default function Product() {
             <h1 className="mb-[24px] font-bold text-[24px] leading-[36px] tracking-[0.86px]">
               IN THE BOX
             </h1>
-            <div className="space-y-[8px]">
+            <div className="space-y-[8px] mb-[88px]">
               {product.includes.map((item, index) => (
                 <div key={index}>
                   <span>{item.quantity}x</span>
