@@ -39,7 +39,7 @@ export default function Product() {
       <span
         onClick={() => navigate(-1)}
         className="block mt-[16px] ml-[24px] text-[#000000] opacity-[50%] 
-        text-[15px] leading-[25px] self-start"
+        text-[15px] leading-[25px] self-start cursor-pointer"
       >
         Go Back
       </span>
