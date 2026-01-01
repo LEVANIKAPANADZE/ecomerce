@@ -131,7 +131,7 @@ export default function Product() {
               ))}
             </div>
 
-            <div>
+            <div className="flex flex-col gap-[20px]">
               {Object.values(product.gallery).map((image, index) => (
                 <picture key={index}>
                   <source media="(min-width:1440px)" srcSet={image.desktop} />
