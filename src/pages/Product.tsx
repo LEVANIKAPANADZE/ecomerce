@@ -121,8 +121,12 @@ export default function Product() {
             <div className="space-y-[8px] mb-[88px]">
               {product.includes.map((item, index) => (
                 <div key={index}>
-                  <span>{item.quantity}x</span>
-                  <span>{item.item}</span>
+                  <span className="text-[#D87D4A] font-bold text-[15px] mr-[24px] leading-[25px] tracking-[0px]">
+                    {item.quantity}x
+                  </span>
+                  <span className="text-[15px] leading-[25px] opacity-50">
+                    {item.item}
+                  </span>
                 </div>
               ))}
             </div>
