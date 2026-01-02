@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import data from "../../data.json";
 
-export default function Home({ id }: { id: string }) {
+export default function Home() {
   const [requestedTech, setRequestedTech] = useState<any | null>(null);
 
   useEffect(() => {
