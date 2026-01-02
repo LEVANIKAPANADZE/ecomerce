@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import data from "../../data.json";
+import AudioTechSel from "../components/AudioTechSel";
 
 export default function Home() {
   const [requestedTech, setRequestedTech] = useState<any | null>(null);
@@ -32,6 +33,8 @@ export default function Home() {
         <p>{requestedTech.description}</p>
         <button>SEE PRODUCT</button>
       </div>
+
+      <AudioTechSel />
     </div>
   );
 }
