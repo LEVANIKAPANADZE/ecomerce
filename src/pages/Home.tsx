@@ -8,16 +8,18 @@ export default function Home() {
   useEffect(() => {
     if (data.length === 0) return;
 
+    setRequestedTech(data[Math.floor(Math.random() * data.length)]);
+
     const interval = setInterval(() => {
       const index = Math.floor(Math.random() * data.length);
       setRequestedTech(data[index]);
     }, 3500);
 
     return () => clearInterval(interval);
-  }, [data]);
+  }, []);
 
   if (!requestedTech) {
-    return <p>Loading...</p>;
+    return <p>Loading... ⏳💻</p>;
   }
 
   return (
