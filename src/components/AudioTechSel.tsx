@@ -18,11 +18,11 @@ export default function AudioTechSel() {
       name: "HEADPHONES",
       image: {
         mobile:
-          "/assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg",
+          "/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
         tablet:
-          "/assets/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg",
+          "/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
         desktop:
-          "/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg",
+          "/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg",
       },
     },
     {
@@ -30,11 +30,11 @@ export default function AudioTechSel() {
       name: "SPEAKERS",
       image: {
         mobile:
-          "/assets/product-zx9-speaker/mobile/image-category-page-preview.jpg",
+          "/assets/product-zx9-speaker/mobile/image-product.jpg",
         tablet:
-          "/assets/product-zx9-speaker/tablet/image-category-page-preview.jpg",
+          "/assets/product-zx9-speaker/tablet/image-product.jpg",
         desktop:
-          "/assets/product-zx9-speaker/desktop/image-category-page-preview.jpg",
+          "/assets/product-zx9-speaker/desktop/image-product.jpg",
       },
     },
     {
@@ -42,11 +42,11 @@ export default function AudioTechSel() {
       name: "EARPHONES",
       image: {
         mobile:
-          "/assets/product-yx1-earphones/mobile/image-category-page-preview.jpg",
+          "/assets/product-yx1-earphones/mobile/image-product.jpg",
         tablet:
-          "/assets/product-yx1-earphones/tablet/image-category-page-preview.jpg",
+          "/assets/product-yx1-earphones/tablet/image-product.jpg",
         desktop:
-          "/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg",
+          "/assets/product-yx1-earphones/desktop/image-product.jpg",
       },
     },
   ];
